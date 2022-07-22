@@ -1,10 +1,16 @@
-import './App.css';
+import "./App.css";
+import questionsList from "./questionsList.js";
+import QuestionBlock from "./question-block";
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <main className="main-container">
+      {
+        questionsList.map(({question, id}) => (
+          <QuestionBlock key={id} question={question}/>
+        ))
+      }
+    </main>
   );
 }
 
