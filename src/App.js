@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 import questionsList from "./questionsList.json";
-import QuestionBlock from "./components/question-block";
+import QABlock from "./components/qa-block";
 
 function App() {
     const [answers, setAnswers] = useState(null);
@@ -22,7 +22,7 @@ function App() {
         <main>
             <form className="main-container" onSubmit={handleSubmit}>
                 {
-                    questions ? questions.map(({question, id}) => <QuestionBlock key={id} question={question} />) : null
+                    questions ? questions.map(({question, id}) => <QABlock key={id} question={question} />) : null
                 }
                 <button>Отправить</button>
             </form>
