@@ -22,6 +22,7 @@ function App() {
         [...inputElems].forEach((elem) => {
             setAnswers(prevValues => [...prevValues, {
                 id: prevValues.length + 1,
+                question: elem.closest(".qa-block").innerText,
                 answer: elem.value
             }]);
         });
