@@ -30,7 +30,9 @@ function App() {
     
     useEffect(() => {
         console.log("User answers: ", answers);
-        localStorage.setItem('answers', JSON.stringify(answers));
+        if (answers.length > 0) {
+            localStorage.setItem('answers', JSON.stringify(answers)); //save user's answers to LocalStorage
+        }
     }, [answers]);
 
     return (
